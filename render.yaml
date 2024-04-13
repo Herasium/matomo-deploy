@@ -6,10 +6,6 @@ services:
     # Recommended health check endpoint: https://matomo.org/faq/how-to/faq_20278/
     healthCheckPath: /matomo.php
     autoDeploy: false
-    disk:
-      name: matomo
-      mountPath: /var/www/html
-      sizeGB: 20
     envVars:
       - key: MATOMO_DATABASE_HOST
         fromService:
@@ -38,10 +34,6 @@ services:
     env: docker
     plan: standard
     autoDeploy: false
-    disk:
-      name: mysql-matomo
-      mountPath: /var/lib/mysql
-      sizeGB: 20
     envVars:
       - key: MYSQL_DATABASE
         value: mysql
