@@ -8,40 +8,11 @@ services:
     autoDeploy: false
     envVars:
       - key: MATOMO_DATABASE_HOST
-        fromService:
-          name: mysql-matomo
-          type: pserv
-          property: host
+      value: <host_value>
       - key: MATOMO_DATABASE_USERNAME
-        fromService:
-          name: mysql-matomo
-          type: pserv
-          envVarKey: MYSQL_USER
+      value: <host_value>
       - key: MATOMO_DATABASE_PASSWORD
-        fromService:
-          name: mysql-matomo
-          type: pserv
-          envVarKey: MYSQL_PASSWORD
+      value: <host_value>
       - key: MATOMO_DATABASE_DBNAME
-        fromService:
-          name: mysql-matomo
-          type: pserv
-          envVarKey: MYSQL_DATABASE
+      value: <host_value>
 
-  - type: pserv
-    name: mysql-matomo
-    repo: https://github.com/render-examples/mysql.git
-    env: docker
-    plan: free
-    autoDeploy: false
-    envVars:
-      - key: MYSQL_DATABASE
-        value: mysql
-      - key: MYSQL_USER
-        value: mysql
-      - key: PORT
-        value: 3306
-      - key: MYSQL_PASSWORD
-        generateValue: true
-      - key: MYSQL_ROOT_PASSWORD
-        generateValue: true
