@@ -2,7 +2,7 @@ services:
   - type: web
     name: matomo
     env: docker
-    plan: standard
+    plan: free
     # Recommended health check endpoint: https://matomo.org/faq/how-to/faq_20278/
     healthCheckPath: /matomo.php
     autoDeploy: false
