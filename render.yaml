@@ -32,7 +32,7 @@ services:
     name: mysql-matomo
     repo: https://github.com/render-examples/mysql.git
     env: docker
-    plan: standard
+    plan: free
     autoDeploy: false
     envVars:
       - key: MYSQL_DATABASE
