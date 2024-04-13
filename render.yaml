@@ -6,13 +6,3 @@ services:
     # Recommended health check endpoint: https://matomo.org/faq/how-to/faq_20278/
     healthCheckPath: /matomo.php
     autoDeploy: false
-    envVars:
-      - key: MATOMO_DATABASE_HOST
-      value: <host_value>
-      - key: MATOMO_DATABASE_USERNAME
-      value: <host_value>
-      - key: MATOMO_DATABASE_PASSWORD
-      value: <host_value>
-      - key: MATOMO_DATABASE_DBNAME
-      value: <host_value>
-
